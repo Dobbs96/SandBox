@@ -1,0 +1,26 @@
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+header {
+  width: 85%;
+  margin: auto;
+  border: 10px solid rgb(144, 7, 255);
+  background-color: rgb(112, 219, 255);
+}
+
+section {
+  height: 400px;
+  width: 80%;
+  margin: 2rem auto;
+  border: 10px solid black;
+}
+
+div {
+  margin: auto;
+  padding: 50px;
+  width: 5%;
+  text-align: center;
+}
