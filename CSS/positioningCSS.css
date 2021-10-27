@@ -13,6 +13,7 @@ header {
 
 section {
   height: 400px;
+  padding: 1rem;
   width: 80%;
   margin: 2rem auto;
   border: 10px solid black;
@@ -23,4 +24,31 @@ div {
   padding: 50px;
   width: 5%;
   text-align: center;
+}
+
+/* .static {
+    DEFAULT
+} */
+
+.relative {
+  position: relative;
+  top: 50px;
+  right: -25%;
+}
+
+/* With out parent being position: relative it will go off the BODY */
+#sectionForAbsolute {
+  position: relative;
+}
+#absolute {
+  position: absolute;
+  top: 18%;
+  left: 95px;
+  opacity: 0.2;
+}
+
+.fixed {
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }

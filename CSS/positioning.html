@@ -14,29 +14,54 @@
 
     <section>
       <h2>Static Positioning</h2>
-      <div style="background-color: aqua">1</div>
+      <div class="static" style="background-color: aqua">1</div>
       <p>Element is in normal flow. This is the default value.</p>
     </section>
 
     <section>
       <h2>Relative Positioning</h2>
-      <div style="background-color: rgb(38, 0, 255)">2</div>
-
+      <div class="relative" style="background-color: rgb(38, 0, 255)">2</div>
       <p>Element is in normal flow but is offset based on provided value.</p>
+      <pre>
+        .relative {
+            position: relative;
+            top: 50px;
+            right: -25%;
+          }
+          
+      </pre>
     </section>
 
-    <section>
+    <section id="sectionForAbsolute">
       <h2>Absolute Positioning</h2>
-      <div style="background-color: rgb(255, 0, 0)">3</div>
+      <div id="absolute" style="background-color: rgb(255, 0, 0)">3</div>
       <p>The element is removed from the normal flow.</p>
-
       <p>Its final position is relative to the positioned parent or ancestor</p>
+      <pre>
+        #sectionForAbsolute {
+            position: relative;
+          }
+          #absolute {
+            position: absolute;
+            top: 18%;
+            left: 95px;
+            opacity: 0.2;
+          }
+      </pre>
     </section>
 
     <section>
       <h2>Fixed Positioning</h2>
-      <div style="background-color: rgb(72, 253, 27)">4</div>
+      <div class="fixed" style="background-color: rgb(72, 253, 27)">4</div>
       <p>The element is removed from the normal document flow.</p>
+      <pre>
+        .fixed {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+          }
+          
+      </pre>
     </section>
   </body>
 </html>
