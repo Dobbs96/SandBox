@@ -44,6 +44,12 @@ header {
   border-radius: 15px;
 }
 
+.main-body {
+  margin: auto;
+  text-align: left;
+  margin-top: 1rem;
+}
+
 #password {
   background-color: #eee;
   -webkit-appearance: none;

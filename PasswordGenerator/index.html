@@ -14,9 +14,24 @@
       </header>
       <main class="main">
         <div class="main-header">
-          <h2>Generated a Password</h2>
+          <h3>Select Below for Secured Password;</h3>
         </div>
         <div class="main-body">
+          <input type="checkbox" name="lower-case" id="lower-case" />
+          <label for="lower-case">LowerCase Letters</label> <br /><br />
+          <input type="checkbox" name="upper-case" id="upper-case" />
+          <label for="upper-case">UpperCase Letters</label> <br /><br />
+          <input type="checkbox" name="numbers" id="numbers" />
+          <label for="numbers">Numbers</label> <br /><br />
+          <input
+            type="checkbox"
+            name="special-characters"
+            id="special-characters"
+          />
+          <label for="special-characters">Special Characters</label>
+          <br /><br />
+        </div>
+        <div class="main-password">
           <textarea
             readonly
             id="password"

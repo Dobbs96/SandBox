@@ -2,6 +2,11 @@
 const generateBTN = document.querySelector("#generate");
 const copyBTN = document.querySelector("#copy");
 const textArea = document.querySelector("#password");
+const lowerCaseValue = document.querySelector("#lower-case");
+const upperCaseValue = document.querySelector("#upper-case");
+const numbersValue = document.querySelector("#numbers");
+const specialCharactersValue = document.querySelector("#special-characters");
+
 // used Chars
 
 const specialCharacters = [
@@ -67,6 +72,18 @@ const upperCasedCharacters = lowerCasedCharacters.map((char) =>
 
 //myFunc
 const generatedPassword = () => {
+  if (lowerCaseValue.checked) {
+    return "abc";
+  }
+  if (upperCaseValue.checked) {
+    return "ABC";
+  }
+  if (numbersValue.checked) {
+    return "123";
+  }
+  if (specialCharactersValue.checked) {
+    return "!@#";
+  }
   return "abcd1234";
 };
 
