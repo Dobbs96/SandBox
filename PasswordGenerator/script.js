@@ -2,10 +2,10 @@
 const generateBTN = document.querySelector("#generate");
 const copyBTN = document.querySelector("#copy");
 const textArea = document.querySelector("#password");
-const lowerCaseValue = document.querySelector("#lower-case");
-const upperCaseValue = document.querySelector("#upper-case");
-const numbersValue = document.querySelector("#numbers");
-const specialCharactersValue = document.querySelector("#special-characters");
+const haslowerCase = document.querySelector("#lower-case");
+const hasupperCase = document.querySelector("#upper-case");
+const hasnumbers = document.querySelector("#numbers");
+const hasspecialCharacters = document.querySelector("#special-characters");
 
 // used Chars
 
@@ -72,19 +72,23 @@ const upperCasedCharacters = lowerCasedCharacters.map((char) =>
 
 //myFunc
 const generatedPassword = () => {
-  if (lowerCaseValue.checked) {
-    return "abc";
+  let selectCharacters = "";
+  let randomNumber = Math.floor(Math.random() * (128 - 8 + 1)) + 8;
+  const randomCharacter = "a";
+  if (
+    haslowerCase.checked === false &&
+    hasupperCase.checked === false &&
+    hasnumbers.checked === false &&
+    hasspecialCharacters.checked === false
+  ) {
+    return (selectCharacters = "You must Choose one above!");
+  } else {
+    while (randomNumber > 0) {
+      selectCharacters += randomCharacter;
+      randomNumber--;
+    }
   }
-  if (upperCaseValue.checked) {
-    return "ABC";
-  }
-  if (numbersValue.checked) {
-    return "123";
-  }
-  if (specialCharactersValue.checked) {
-    return "!@#";
-  }
-  return "abcd1234";
+  return selectCharacters;
 };
 
 const writePassword = () => {
