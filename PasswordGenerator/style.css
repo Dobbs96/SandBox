@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+  font-family: sans-serif, Georgia, "Times New Roman", Times, serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  width: 70%;
+}
+
+header {
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+.main {
+  background-color: #f2f2f2;
+  box-shadow: 11px 10px 12px -2px rgba(0, 0, 0, 0.41);
+  -webkit-box-shadow: 11px 10px 12px -2px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 11px 10px 12px -2px rgba(0, 0, 0, 0.41);
+  padding: 2rem;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
