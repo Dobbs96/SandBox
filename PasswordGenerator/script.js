@@ -81,7 +81,6 @@ function getRandom(arr) {
 const generatedPassword = () => {
   let selectCharacters = [];
   let givenCharacters = [];
-  let result = [];
   if (
     haslowerCase.checked === false &&
     hasupperCase.checked === false &&
