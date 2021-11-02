@@ -1,0 +1,23 @@
+body {
+  width: 80%;
+  margin: auto;
+  background-color: #eee;
+}
+
+h1 {
+  text-align: center;
+}
+
+ol {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+li:nth-child(odd) a {
+  color: rgb(0, 102, 255);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
