@@ -2,10 +2,10 @@
 const generateBTN = document.querySelector("#generate");
 const copyBTN = document.querySelector("#copy");
 const textArea = document.querySelector("#password");
-const haslowerCase = document.querySelector("#lower-case");
-const hasupperCase = document.querySelector("#upper-case");
-const hasnumbers = document.querySelector("#numbers");
-const hasspecialCharacters = document.querySelector("#special-characters");
+const hasLowerCase = document.querySelector("#lower-case");
+const hasUpperCase = document.querySelector("#upper-case");
+const hasNumbers = document.querySelector("#numbers");
+const hasSpecialCharacters = document.querySelector("#special-characters");
 
 // used Chars
 
@@ -82,31 +82,31 @@ const generatedPassword = () => {
   let selectCharacters = [];
   let givenCharacters = [];
   if (
-    haslowerCase.checked === false &&
-    hasupperCase.checked === false &&
-    hasnumbers.checked === false &&
-    hasspecialCharacters.checked === false
+    hasLowerCase.checked === false &&
+    hasUpperCase.checked === false &&
+    hasNumbers.checked === false &&
+    hasSpecialCharacters.checked === false
   ) {
     return (selectCharacters = "You must Choose one above!");
   }
   let num = Math.floor(Math.random() * (128 - 8 + 1)) + 8;
   while (num > 0) {
-    if (haslowerCase.checked) {
+    if (hasLowerCase.checked) {
       givenCharacters = givenCharacters.concat(lowerCasedCharacters);
       selectCharacters.push(getRandom(lowerCasedCharacters));
       num--;
     }
-    if (hasupperCase.checked) {
+    if (hasUpperCase.checked) {
       givenCharacters = givenCharacters.concat(upperCasedCharacters);
       selectCharacters.push(getRandom(upperCasedCharacters));
       num--;
     }
-    if (hasnumbers.checked) {
+    if (hasNumbers.checked) {
       givenCharacters = givenCharacters.concat(numericCharacters);
       selectCharacters.push(getRandom(numericCharacters));
       num--;
     }
-    if (hasspecialCharacters.checked) {
+    if (hasSpecialCharacters.checked) {
       givenCharacters = givenCharacters.concat(specialCharacters);
       selectCharacters.push(getRandom(specialCharacters));
       num--;
