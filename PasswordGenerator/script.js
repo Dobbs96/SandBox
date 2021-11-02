@@ -71,10 +71,17 @@ const upperCasedCharacters = lowerCasedCharacters.map((char) =>
 );
 
 //myFunc
+function getRandom(arr) {
+  const randIndex = Math.floor(Math.random() * arr.length);
+  const randElement = arr[randIndex];
+
+  return randElement;
+}
+
 const generatedPassword = () => {
-  let selectCharacters = "";
-  let randomNumber = Math.floor(Math.random() * (128 - 8 + 1)) + 8;
-  const randomCharacter = "a";
+  let selectCharacters = [];
+  let givenCharacters = [];
+  let result = [];
   if (
     haslowerCase.checked === false &&
     hasupperCase.checked === false &&
@@ -82,13 +89,31 @@ const generatedPassword = () => {
     hasspecialCharacters.checked === false
   ) {
     return (selectCharacters = "You must Choose one above!");
-  } else {
-    while (randomNumber > 0) {
-      selectCharacters += randomCharacter;
-      randomNumber--;
+  }
+  let num = Math.floor(Math.random() * (128 - 8 + 1)) + 8;
+  while (num > 0) {
+    if (haslowerCase.checked) {
+      givenCharacters = givenCharacters.concat(lowerCasedCharacters);
+      selectCharacters.push(getRandom(lowerCasedCharacters));
+      num--;
+    }
+    if (hasupperCase.checked) {
+      givenCharacters = givenCharacters.concat(upperCasedCharacters);
+      selectCharacters.push(getRandom(upperCasedCharacters));
+      num--;
+    }
+    if (hasnumbers.checked) {
+      givenCharacters = givenCharacters.concat(numericCharacters);
+      selectCharacters.push(getRandom(numericCharacters));
+      num--;
+    }
+    if (hasspecialCharacters.checked) {
+      givenCharacters = givenCharacters.concat(specialCharacters);
+      selectCharacters.push(getRandom(specialCharacters));
+      num--;
     }
   }
-  return selectCharacters;
+  return selectCharacters.join("");
 };
 
 const writePassword = () => {
