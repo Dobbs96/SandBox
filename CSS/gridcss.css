@@ -109,3 +109,43 @@
 .new-box-container:nth-child(even) > div:first-child {
   order: 99;
 }
+
+/* Main Grid */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 2fr;
+  grid-template-rows: 1fr 3fr 3fr 1fr;
+  grid-template-areas:
+    /*  column   1      2       3 */
+    "red   red    white" /*row 1*/
+    "red   red    yellow" /*row 2*/
+    "blue  orange yellow" /*row 3*/
+    "black black  black"; /*row 4*/
+  height: 100vh;
+  margin: 2em;
+}
+
+.red {
+  grid-area: red;
+  background-color: red;
+}
+.blue {
+  grid-area: blue;
+  background-color: blue;
+}
+.white {
+  grid-area: white;
+}
+.orange {
+  grid-area: orange;
+  background-color: orange;
+}
+.black {
+  grid-area: black;
+  background-color: black;
+}
+.yellow {
+  grid-area: yellow;
+  background-color: yellow;
+}
