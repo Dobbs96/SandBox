@@ -14,9 +14,7 @@ For more information please check [GitHub Licensing](https://docs.github.com/en/
 
 ## User Story
 
-```
 James wants to be able to repeat code until it comes out as smooth as he thinks. He knows you can't just code just by memory alone, you need to practice each day and add something new.
-```
 
 ## Questions
 
