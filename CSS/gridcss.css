@@ -97,11 +97,13 @@
 .grid-four > div:nth-child(even) {
   display: grid;
   grid-template-columns: repeat(1, 2fr 1fr);
+  grid-template-rows: minmax(200px, auto);
 }
 /* switch grid-template-columns you need to change .new-box-container:nth-child(even TO odd) */
 .grid-four > div:nth-child(odd) {
-  grid-template-columns: repeat(1, 1fr 2fr);
   display: grid;
+  grid-template-columns: repeat(1, 1fr 2fr);
+  grid-template-rows: minmax(200px, auto);
 }
 
 .new-box-container:nth-child(even) > div:first-child {
