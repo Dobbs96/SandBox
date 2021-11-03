@@ -1,10 +1,15 @@
 /* All Grids */
+.grid {
+  margin-bottom: 1em;
+}
+
 .grid > div {
   background-color: #eee;
   padding: 1em;
-  margin: 2px;
+  margin: 1px;
   border: 1px red solid;
 }
+
 .grid > div:nth-child(odd) {
   background-color: #a0a0a0;
 }
@@ -20,3 +25,27 @@
 }
 
 /* Second Div */
+
+.grid-two {
+  display: grid;
+  /* better than percents */
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  grid-template-columns: repeat(3, 1fr 2fr);
+  gap: 0.3em;
+  /* will overflow */
+  /* grid-auto-rows: 125px; */
+  /* stretes all repeats with longest div (minmax auto)*/
+  grid-template-rows: minmax(100px, auto);
+}
+
+.nested > div {
+  border: 1px black solid;
+}
+
+.nested {
+  /* gives even space around */
+  display: grid;
+  /* put into columns strectes to fill box */
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 20%;
+}
